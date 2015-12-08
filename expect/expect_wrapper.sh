@@ -4,7 +4,8 @@ alias=$1
 hostname=$2
 password=$3
 basepath=$(cd `dirname $0`; pwd)
-password_file=$basepath/expect_pass
+#password_file=$basepath/expect_pass
+password_file=~/.expect_pass
 
 #touch $password_file
 
