@@ -1,0 +1,6 @@
+# app
+alias sb='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+# svn
+alias svntoadd="svn st |grep '?' | grep -v dingrui | grep -v issue"
+alias svnadd="svn st |grep '?' | grep -v dingrui | grep -v issue | awk '{print \$2}' | xargs svn add"
