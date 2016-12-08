@@ -2,8 +2,13 @@
 
 set hostname [lindex $argv 0] 
 set password [lindex $argv 1] 
+set port [lindex $argv 2] 
+
+if { $port == "" } {
+    set port 22
+}
  
-spawn /usr/bin/ssh $hostname
+spawn /usr/bin/ssh $hostname -p $port
 expect {
     "*assword:" {
         send "$password\n"
